@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33328.57
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cityzbase", "cityzbase\cityzbase.csproj", "{684ECFF1-F64E-4021-858F-6997F475DE41}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{684ECFF1-F64E-4021-858F-6997F475DE41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{684ECFF1-F64E-4021-858F-6997F475DE41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{684ECFF1-F64E-4021-858F-6997F475DE41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{684ECFF1-F64E-4021-858F-6997F475DE41}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5D8D5FDD-BB25-4FCE-88FA-0BF246C029DA}
+	EndGlobalSection
+EndGlobal
