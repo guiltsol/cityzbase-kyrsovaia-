@@ -18,24 +18,16 @@ namespace cityzbase
         {
             InitializeComponent();
         }
-
         private void Form3_Load(object sender, EventArgs e)
         {
-            
             StreamReader file = new StreamReader(@"C:\Users\Администратор\source\repos\cityzbase\citibase.txt");
-            
             dt = new DataTable();
-            
             dt.Columns.Add("Страна");
             dt.Columns.Add("Название города");
             dt.Columns.Add("Население");
             dt.Columns.Add("Площадь города(км^2)");
             dt.Columns.Add("Столица");
             dt.Columns.Add("Общая зп города");
-          
-
-            
-
             string[] values; 
             string newline; 
             while ((newline = file.ReadLine()) != null)
@@ -46,23 +38,17 @@ namespace cityzbase
                 {
                     dr[i] = values[i]; 
                 }
-
                 dt.Rows.Add(dr); 
             }
             file.Close();
-            
             dataGridView1.DataSource = dt;
-           
             dataGridView1.AutoResizeColumns();
         }
-
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox2.Checked)
             {
-                
                 dt.Columns.Add("Средняя плотность населения");
-               
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
                     double nas = Convert.ToDouble(dt.Rows[i]["Население"]);
@@ -75,17 +61,13 @@ namespace cityzbase
             
             {
                 dt.Columns.Remove("Средняя плотность населения");
-               
             }
         }
-
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked)
             {
-                
                 dt.Columns.Add("Средняя зп населения");
-               
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
                     double zp = Convert.ToDouble(dt.Rows[i]["Общая зп города"]);
@@ -95,23 +77,18 @@ namespace cityzbase
                 dataGridView1.DataSource = dt;
             }
             else
-         
             {
                 dt.Columns.Remove("Средняя зп населения");
-                
             }
         }
-
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             dt.DefaultView.RowFilter = string.Format("[{0}] LIKE '{1}%'", filterField, textBox1.Text);
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             Microsoft.Office.Interop.Excel.Application ExcelApp = new Microsoft.Office.Interop.Excel.Application();

@@ -21,18 +21,15 @@ namespace cityzbase
         {
             InitializeComponent();
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             Form2 f = new Form2();
             f.Show();
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
             if (File.Exists(@"C:\Users\Администратор\source\repos\cityzbase\citibase.txt"))
@@ -46,7 +43,6 @@ namespace cityzbase
                 return;
             }
         }
-
         private void button3_Click(object sender, EventArgs e)
         {
             Microsoft.Office.Interop.PowerPoint.Application app = new Microsoft.Office.Interop.PowerPoint.Application();
