@@ -128,5 +128,24 @@ namespace cityzbase
             MessageBox.Show("Excel file created , you can find the file C:/Users/Администратор/source/repos/cityzbase/tabs.xlsx");
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+        Point lastPoint;
+        private void Form3_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+
+        private void Form3_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
+        }
     }
 }
